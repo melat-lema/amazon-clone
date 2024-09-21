@@ -11,7 +11,7 @@ import { db } from '../../Utility/firebase'
 import { useNavigate } from 'react-router-dom'
 import { Type } from '../../Utility/action.type'
 function Payment(){
-
+  const navigate= useNavigate()
   const [{user, basket}, dispatch]= useContext(DataContext)
   const totalItem= basket?.reduce((amount, item)=>{
     return item.amount+amount
@@ -23,7 +23,6 @@ function Payment(){
   const [processing, setProcessing]= useState(false)
   const stripe = useStripe();
   const elements = useElements();
-  const navigate= useNavigate()
   const handleChange=(e)=>{
     e?.error?.message? setCardError(e?.error?.message) : setCardError("")
   }
@@ -59,7 +58,7 @@ dispatch({
   type: Type.EMPTY_BASKET}
 )
 setProcessing(false)
-useNavigate("/orders", {state: {msg:"you have placed new order"}})
+navigate("/orders", {state: {msg:"you have placed new order"}})
     }
     catch(error){
       console.log(error)

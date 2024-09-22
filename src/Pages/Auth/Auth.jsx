@@ -30,7 +30,7 @@ function Auth(){
           user: userInfo.user
         })
         setLoading({...loading, signIn:false})
-        navigate(navStateData?.state.redirect || "/")
+        navigate( "/amazonclone")
       }) .catch((err)=>{
         setError(err.message)
         setLoading({...loading, signIn:false})
@@ -45,7 +45,7 @@ function Auth(){
           user: userInfo.user
         })
         setLoading({...loading, signUp:false})
-        navigate(navStateData?.state.redirect || "/")
+        navigate( "/amazonclone")
       }) .catch((err)=>{setError(err.message)
       setLoading({...loading, signUp:false})
 

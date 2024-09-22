@@ -15,7 +15,7 @@ function Routering(){
   return(
     <Router>
       <Routes>
-        <Route path='/' element={<Landing/>}/>
+        <Route path='/amazonclone' element={<Landing/>}/>
         <Route path='/auth' element={<Auth/>}/>
         <Route path="/payments" element={
           <ProtectedRoute msg={"you must log in to pay"} redirect={"/payments"}>

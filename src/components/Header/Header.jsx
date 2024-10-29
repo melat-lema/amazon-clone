@@ -20,7 +20,7 @@ function Header(){
         <div className={classes.header__container}>
           <div className={classes.logo__container}>
           {/* {logo} */}
-            <Link to="/">
+            <Link to="/amazonclone">
               <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" alt="amazon logo"/>
             </Link>  
             {/* {delivery} */}
